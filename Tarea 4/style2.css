@@ -1,0 +1,16 @@
+table{
+    border:1px solid #000;
+    border-collapse: collapse;
+}
+
+table td{
+    border:1px solid #5a5a5a;
+}
+
+table .FI{
+    background-color: blue;
+}
+
+table .FP{
+    background-color: red;
+}
