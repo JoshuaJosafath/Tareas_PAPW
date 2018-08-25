@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Page Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body>
+        <form method="POST">
+            Ingrese su Nombre:
+                <input type="text" placeholder="Escriba su Nombre(s)" name="NOMBRE" required autofocus></br>
+            Ingrese su Apellido:
+                <input type="text" placeholder="Escriba su Apellidos(s)" name="APELLIDO" required></br>
+            Ingrese su Correo:
+                <input type="email" placeholder="Escriba su Correo" name="CORREO" required></br>
+            Ingrese su Edad:
+                <input type="number" placeholder="Escriba su Edad" name="EDAD" min="18" max="90"></br>
+            Ingrese su Número de Celular:
+                <input type="tel" placeholder="Escriba su Número de Celular" name="TELEFONO"></br>
+                    <form method="get">
+                        Ingrese su Nombre de Usuario:
+                            <input type="text" placeholder="Escriba su Nombre de Usuario" name="USUARIO" required></br>
+                    </form>
+            Ingrese su Contraseña:
+                <input type="password" placeholder="Escriba su Contraseña" name="CONTRASEÑA" required></br>
+            Confirme su Contraseña:
+                <input type="password" placeholder="Escriba de nuevo su Contraseña" name="CONTRASEÑA2" required></br>
+            Pais:
+                <select name="PAIS">
+                    <option value="MEXICO">México</option>
+                    <option value="EUA">Estados Unidos</option>
+                    <option value="CANADA">Canada</option>
+                </select></br>
+            Metodos de Pago:
+                <input type="checkbox" name="PAYPAL">PAYPAL
+                <input type="checkbox" name="TARGETADEBITO">Targeta Bancaria
+                <input type="checkbox" name="EFECTIVO">Efectivo</br>
+
+            <input type="file">
+            
+            <input type="submit" value="Enviar">
+        </form>
+    </body>
+</html>
