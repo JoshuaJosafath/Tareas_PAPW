@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>REGISTRAR CLIENTES</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/styleReg_Usuarios.css">
+    </head>
+
+    <body>
+        <h1>Registo de Clientes</h1>
+        <fieldset>
+            <legend>Ingrese los Datos del Nuevo Cliente</legend>
+            
+            Imagen de Perfil: <br>
+            <output id="list"></output> <br>
+            <input type="file" id="files" name="files[]" required> <br>
+
+            Imagen de Portada: <br>
+            <output id="list2"></output> <br>
+            <input type="file" id="files2" name="files2[]" required> <br>
+            <br>
+
+            Nombre: <input type="text" name="NAME" required> <br>
+            Apellido: <input type="text" name="LASTNAME" required> <br>
+            Correo Electronico: <input type="email" name="EMAIL" required> <br>
+            Contraseña: <input type="password" name="PASSWORD" minlength="8" required> <br>
+            Telefono: <input type="tel" name="TELPHONE"> <br>
+            Direccion: <input type="text" name="ADDRESS"> <br>
+        </fieldset>
+    </body>
+    
+
+    <script>
+        function archivo(evt) {
+        files = evt.target.files; // FileList object
+        //Obtenemos la imagen del campo "file". 
+        for (var i = 0, f; f = files[i]; i++) {         
+         //Solo admitimos imágenes.
+        if (!f.type.match('image.*')) {
+              continue;
+         }
+     
+         var reader = new FileReader();
+         
+         reader.onload = (function(theFile) {
+             return function(e) {
+             // Creamos la imagen.
+                    document.getElementById("list").innerHTML = ['<img class="thumb" src="', e.target.result,'" title="', escape(theFile.name), '"/>'].join('');
+             };
+         })(f);
+
+         reader.readAsDataURL(f);
+     }
+}      
+    document.getElementById('files').addEventListener('change', archivo, false);
+    </script>
+</html>
