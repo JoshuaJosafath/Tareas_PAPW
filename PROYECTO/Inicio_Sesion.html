@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Inicio de Sesion</title>
+        <link rel="stylesheet" href="../Materialize/css/materialize.min.css" media="screen,projection">   
+        <link rel="stylesheet" href="css/styleInicio_Sesion.css";>
+         
+    </head>
+
+    <body>
+        <header><h1>Nombre de la Tienda</h1></header>
+        <fieldset>
+            <legend>Inicio de Sesion</legend>
+
+            <form action="Clientes.php" method="post">
+                Usuario o Correo: <br>
+                <input type="text" name="USER/EMAIL" required> <br>
+                <br>
+                Contraseña: <br>
+                <input type="password" name="PASSWORD" required> <br>
+                <br>
+                <input type="checkbox" name="">Mantener Sesion Iniciada <br>
+                <input type="submit" value="Iniciar Sesion">
+            </form>
+
+        </fieldset>
+    </body>
+</html>
