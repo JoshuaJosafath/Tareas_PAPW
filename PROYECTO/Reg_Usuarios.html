@@ -1,58 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <meta charset="utf-8"/>
-        <title>REGISTRAR CLIENTES</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Registrar Usuarios</title>
         <link rel="stylesheet" href="css/styleReg_Usuarios.css">
+        <link rel="stylesheet" href="../Materialize/css/materialize.min.css">
+        <script src="js/Reg_Usuarios.js"></script>
+        <script src="../JQuery/jquery-3.3.1.min.js"></script>
     </head>
 
     <body>
-        <h1>Registo de Clientes</h1>
+        <header><h1>Nombre de la Tienda</h1></header>
+        
         <fieldset>
-            <legend>Ingrese los Datos del Nuevo Cliente</legend>
-            
-            Imagen de Perfil: <br>
-            <output id="list"></output> <br>
-            <input type="file" id="files" name="files[]" required> <br>
+            <legend>Registre los Datos del Nuevo Cliente</legend>
 
-            Imagen de Portada: <br>
-            <output id="list2"></output> <br>
-            <input type="file" id="files2" name="files2[]" required> <br>
-            <br>
+            <form action="Clientes.php" name="NEWCUSTOMER" id="NewCustomer" method="post">
 
-            Nombre: <input type="text" name="NAME" required> <br>
-            Apellido: <input type="text" name="LASTNAME" required> <br>
-            Correo Electronico: <input type="email" name="EMAIL" required> <br>
-            Contraseña: <input type="password" name="PASSWORD" minlength="8" required> <br>
-            Telefono: <input type="tel" name="TELPHONE"> <br>
-            Direccion: <input type="text" name="ADDRESS"> <br>
+                <div>
+                Imagen de Perfil <br>
+                <img src=""> <br>
+                <input type="file" name="IMG1" id="Img1" accept="image/*"> <br>
+                </div>
+
+                <br>
+                
+                <div>
+                Imagen de Portada <br>
+                <img src=""> <br>
+                <input type="file" name="IMG2" id="Img2" accept="image/*"> <br>
+                </div>
+                
+                Nombre(s): <input  type="text" name="NAME" pattern="[a-zA-Z]+" required> <br>
+                Apellidos: <input type="text" name="LASTNAME" pattern="[a-zA-Z]+" required> <br>
+                Correo Electronico: <input type="email" name="EMAIL" required> <br>
+                Usuario: <input type="text" name="USER" pattern=".{6,}" required title="6 caracteres minimo"> <br>
+                Contraseña: <input type="password" name="PASSWORD" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required title="8 caracteres, 1 mayuscula, 1 minuscula, 1 numero, como minimo"> <br>
+                Telefono: <input type="tel" class="Telefono" name="TELPHONE"><br>
+                Direccion: <input type="text" name="ADDRESS"> <br>
+                
+                <input type="submit" value="Registrar">
+                <input type="button" value="Cancelar">
+            </form>
         </fieldset>
     </body>
-    
-
-    <script>
-        function archivo(evt) {
-        files = evt.target.files; // FileList object
-        //Obtenemos la imagen del campo "file". 
-        for (var i = 0, f; f = files[i]; i++) {         
-         //Solo admitimos imágenes.
-        if (!f.type.match('image.*')) {
-              continue;
-         }
-     
-         var reader = new FileReader();
-         
-         reader.onload = (function(theFile) {
-             return function(e) {
-             // Creamos la imagen.
-                    document.getElementById("list").innerHTML = ['<img class="thumb" src="', e.target.result,'" title="', escape(theFile.name), '"/>'].join('');
-             };
-         })(f);
-
-         reader.readAsDataURL(f);
-     }
-}      
-    document.getElementById('files').addEventListener('change', archivo, false);
-    </script>
 </html>

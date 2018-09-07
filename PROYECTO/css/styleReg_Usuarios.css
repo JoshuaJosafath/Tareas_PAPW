@@ -1,9 +1,25 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    text-align: center;
+}
+
+body{
+    background-color: #4484CE;
+    background-image: url("../img/new_clients_daily.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 body fieldset{
     text-align: center;
 }
 
-.thumb{
-    height: 300px;
-    border: 1px solid #000;
-    margin: 10px 5px 0 0;
+
+
+legend{
+    text-align: left;
+    font-size: 200%;
 }
