@@ -1,0 +1,30 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header, .Video, .Detalles, .DetalleNombre{
+    text-align: center;
+}
+
+#UnidadesRest, #Usuario, #DetailName{
+    width: 30%;
+}
+
+#Descrip{
+    width: 75%;
+    overflow:auto;
+}
+
+#NewComment{
+    width: 100%;
+    overflow: auto;
+}
+
+#UnidadesRest{
+    -moz-appearance: textfield;
+}
+
+table{
+    width: 100%;
+    text-align: center;
+}

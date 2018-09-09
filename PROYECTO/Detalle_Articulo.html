@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Detalle del Articulo</title>
+        <link rel="stylesheet" href="css/styleDetalle_Articulo.css">
+    </head>
+
+    <body>
+        <header><h1>Nombre de la Tienda</h1></header>
+        <div class="DetalleNombre">
+            ARTICULO: <br>
+            <input type="text"  id="DetailName" readonly>
+        </div>
+        <table>
+            <tr>
+                <th>Imagen 1 del Articulo</th>
+                <th>Imagen 2 del Articulo</th>
+                <th>Imagen 3 del Articulo</th>
+            </tr>
+
+            <tr>
+                <td><img class="ImgSrc1" src="df"></td>
+                <td><img class="ImgSrc2" src="dvs"></td>
+                <td><img class="ImgSrc3" src="vds"></td>
+            </tr>
+
+        </table>
+        
+        <br>
+
+        <div class="Video">
+                Video del Articulo <br>
+                <video class="VidSrc" src="" autoplay controls> <br>
+        </div>
+
+        <div class="Detalles">
+            Descripcion: <br>
+            <textarea name="DESCRIP" id="Descrip" cols="50" rows="5" readonly></textarea> <br>
+            <br>
+            Unidades Restantes: <br>
+            <input type="number" name="UNIDADESREST" id="UnidadesRest" readonly> <br>
+            <br>
+            Nombre del Vendedor: <br>
+            <input type="text" name="USUARIO" id="Usuario" readonly> <br>
+            <br>
+            Valoracion:
+                
+            <br>
+            <br><br>
+        </div>
+
+
+
+        <div class="Comentarios">
+            <h3>SECCION DE COMENTARIOS</h3>
+            <textarea name="NEWCOMMENT" id="NewComment" cols="50" rows="3" placeholder="Deje su comentario..."></textarea>
+            <br>
+            <h4>Otros Comentarios</h4>
+        </div>
+
+    </body>
+</html>
