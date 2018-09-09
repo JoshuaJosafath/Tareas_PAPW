@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Inicio de Sesion</title>
-        <link rel="stylesheet" href="../Materialize/css/materialize.min.css" media="screen,projection">   
         <link rel="stylesheet" href="css/styleInicio_Sesion.css";>
          
     </head>
@@ -17,13 +16,14 @@
 
             <form action="Clientes.php" method="post">
                 Usuario o Correo: <br>
-                <input type="text" name="USER/EMAIL" required> <br>
+                <input type="text" name="USER/EMAIL" id="User-Email" required> <br>
                 <br>
                 Contraseña: <br>
-                <input type="password" name="PASSWORD" required> <br>
+                <input type="password" name="PASSWORD" id="Password" required> <br>
                 <br>
-                <input type="checkbox" name="">Mantener Sesion Iniciada <br>
+                <input type="checkbox" name="KEEPLOGED">Mantener Sesion Iniciada <br>
                 <input type="submit" value="Iniciar Sesion">
+                <input type="reset" value="Cancelar">
             </form>
 
         </fieldset>

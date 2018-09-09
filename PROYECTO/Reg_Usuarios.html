@@ -6,9 +6,6 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Registrar Usuarios</title>
         <link rel="stylesheet" href="css/styleReg_Usuarios.css">
-        <link rel="stylesheet" href="../Materialize/css/materialize.min.css">
-        <script src="js/Reg_Usuarios.js"></script>
-        <script src="../JQuery/jquery-3.3.1.min.js"></script>
     </head>
 
     <body>
@@ -20,29 +17,45 @@
             <form action="Clientes.php" name="NEWCUSTOMER" id="NewCustomer" method="post">
 
                 <div>
-                Imagen de Perfil <br>
-                <img src=""> <br>
-                <input type="file" name="IMG1" id="Img1" accept="image/*"> <br>
+                    Imagen de Perfil <br>
+                    <img src=""> <br>
+                    <input type="file" name="IMG1" id="Img1" accept="image/*" required> <br>
                 </div>
 
                 <br>
                 
                 <div>
-                Imagen de Portada <br>
-                <img src=""> <br>
-                <input type="file" name="IMG2" id="Img2" accept="image/*"> <br>
+                    Imagen de Portada <br>
+                    <img src=""> <br>
+                    <input type="file" name="IMG2" id="Img2" accept="image/*" required> <br>
                 </div>
+
+                <br>
                 
-                Nombre(s): <input  type="text" name="NAME" pattern="[a-zA-Z]+" required> <br>
-                Apellidos: <input type="text" name="LASTNAME" pattern="[a-zA-Z]+" required> <br>
-                Correo Electronico: <input type="email" name="EMAIL" required> <br>
-                Usuario: <input type="text" name="USER" pattern=".{6,}" required title="6 caracteres minimo"> <br>
-                Contraseña: <input type="password" name="PASSWORD" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required title="8 caracteres, 1 mayuscula, 1 minuscula, 1 numero, como minimo"> <br>
-                Telefono: <input type="tel" class="Telefono" name="TELPHONE"><br>
-                Direccion: <input type="text" name="ADDRESS"> <br>
+                Nombre(s):<br>
+                <input  type="text" name="NAME" pattern="[a-zA-Z]+" required> <br>
+                <br>
+                Apellidos:<br>
+                <input type="text" name="LASTNAME" pattern="[a-zA-Z]+" required> <br>
+                <br>
+                Correo Electronico:<br>
+                <input type="email" name="EMAIL" required> <br>
+                <br>
+                Usuario:<br>
+                <input type="text" name="USER" pattern=".{6,}" required title="6 caracteres minimo"> <br>
+                <br>
+                Contraseña:<br>
+                <input type="password" name="PASSWORD" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required title="8 caracteres, 1 mayuscula, 1 minuscula, 1 numero, como minimo"> <br>
+                <br>
+                Telefono:<br>
+                <input type="tel" class="Telefono" name="TELPHONE" placeholder="01-23-45-67-89"><br>
+                <br>
+                Direccion:<br>
+                <input type="text" name="ADDRESS"> <br>
+                <br>
                 
                 <input type="submit" value="Registrar">
-                <input type="button" value="Cancelar">
+                <input type="reset" value="Cancelar">
             </form>
         </fieldset>
     </body>

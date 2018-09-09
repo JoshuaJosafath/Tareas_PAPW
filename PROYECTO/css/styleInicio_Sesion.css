@@ -10,6 +10,11 @@ body fieldset{
     text-align: center;
 }
 
+#User-Email, #Password{
+    width: 40%;
+    text-align: center;
+}
+
 legend{
     text-align: left;
     font-size: 200%;

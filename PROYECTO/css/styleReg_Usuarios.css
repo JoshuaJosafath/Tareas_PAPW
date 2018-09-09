@@ -6,18 +6,9 @@ header{
     text-align: center;
 }
 
-body{
-    background-color: #4484CE;
-    background-image: url("../img/new_clients_daily.gif");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 body fieldset{
     text-align: center;
 }
-
-
 
 legend{
     text-align: left;
