@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Gestion de Articulos a la Venta</title>
+        <link rel="stylesheet" href="css/styleGestion_Articulos_Venta.css">
+    </head>
+    
+    <body>
+        <header><h1>Nombre de la Tienda</h1></header>
+        
+        <fieldset>
+            <legend>Registre los Datos del Nuevo Articulo</legend>
+
+            <form action="Articulos.php" name="NEWARTICLE" id="NewArticle">
+
+                <div class="DatosArticulo">
+                    Nombre del Articulo:<br>
+                    <input type="text" name="ARTICLENAME" id="ArticleName" required> <br>
+                    <br>
+                    Descripcion:<br>
+                    <textarea name="ARTICLEDESCRIP" id="ArticleDescrip" required cols="40" rows="2"></textarea> <br>
+                    <br>
+                    Categorias: <br> 
+                    <select name="ARTICLECATEG" id="ArticleCateg" multiple required>
+                        <option>Categoria 1</option>
+                        <option>Categoria 2</option>
+                        <option>Categoria 3</option>
+                    </select> <br>
+                    Precio:<br>
+                    <input type="number" name="ARTICLEPRICE" id="ArticlePrice" required> <br>
+                    <br>
+                    Unidades:<br>
+                    <input type="number" name="ARTICLEUNITS" id="ArticleUnits" required> <br>
+                    <br>
+                </div>
+
+                <br> <br>
+
+                <div>
+                    Imagen 1 del Articulo <br>
+                    <input type="file" name="IMGFILE1" id="ImgFile1" accept="image/*" required> <br>
+                    <img class="ImgSrc1" src=""> <br>
+                </div>
+
+                <br>
+                
+                <div>
+                    Imagen 2 del Articulo <br>
+                    <input type="file" name="IMGFILE2" id="ImgFile2" accept="image/*" required> <br>
+                    <img class="ImgSrc2" src=""> <br>
+                </div>
+
+                <br>
+
+                <div>
+                    Imagen 3 del Articulo <br>
+                    <input type="file" name="IMGFILE3" id="ImgFile3" accept="image/*" required> <br>
+                    <img class="ImgSrc3" src=""> <br>
+                </div>
+
+                <br>
+
+                <div>
+                    Video del Articulo <br>
+                    <input type="file" name="VIDFILE" id="VidFile" accept="video/*" required> <br>
+                    <video class="VidSrc" src=""> <br>
+                </div>
+
+                <br>
+                
+                <input type="submit" value="Poner en Venta">
+                <input type="reset" value="Cancelar"> <br>
+                <input type="button" value="Almacenar como Borrador">
+            </form>
+        </fieldset>
+    </body>
+</html>

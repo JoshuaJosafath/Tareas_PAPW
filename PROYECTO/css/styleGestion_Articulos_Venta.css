@@ -1,0 +1,20 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    text-align: center;
+}
+
+body fieldset{
+    text-align: center;
+}
+
+#ArticlePrice, #ArticleUnits{
+    -moz-appearance: textfield;
+}
+
+legend{
+    text-align: left;
+    font-size: 200%;
+}
