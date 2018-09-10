@@ -24,7 +24,78 @@ header, .Video, .Detalles, .DetalleNombre{
     -moz-appearance: textfield;
 }
 
-table{
+.Imags{
     width: 100%;
     text-align: center;
+    border :0px;
+}
+/*commentarios*/
+ul{
+    list-style-type: none;
+}
+
+.Comments-Container{
+    margin: 60px auto 15px;
+    width: 90%;
+}
+
+.Comments-List{
+    margin-top: 30px;
+    position: relative;
+}
+.Comments-List li{
+    margin-bottom: 15px;
+    display: block;
+    position: relative;
+}
+.Comments-List li:after{
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    width: 0;
+}
+/*Avatar*/
+.Comments-List .Avatar{
+    width: 65px;
+    height: 65px;
+    position: relative;
+    z-index: 99;
+    float: left;
+    border: 3px solid gray;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+.Comments-List .Avatar img{
+    width: 100%;
+    height: 100%;
+}
+/*Caja del Comentario*/
+.Comments-List .Comment-Box{
+    width: 650px;
+    float: right;
+    position: relative;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+}
+.Comment-Box .Comment-Head{
+    background: #fcfcfc;
+    padding: 10px 12px;
+    border-bottom: 1px solid #e5e5e5;
+    overflow: hidden;
+    border-radius: 4px 4px 0 0;
+}
+.Comment-Head .Comment-Name-Autor{
+    color: #03658c;
+    font-size: 14px;
+    font-weight: 700;
+    float: left;
+    margin-right: 10px;
+}
+.Comment-Box .Comment-Head span{
+    float: left;
+    color: #999;
+    font-size: 13px;
+    position: relative;
+    top: 1px;
 }

@@ -4,34 +4,31 @@
         <meta charset="utf-8" />
         <title>TIENDA</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!--<link rel="stylesheet" type="text/css" media="screen" href="Style.css" />-->
+        <link rel="stylesheet" href="css/stylePrincipal.css">
     </head>
-
-    <body>
+        <h1>Nombre de la Tienda</h1>
         <header>
-            <section>
-                <img class="LOGO" src="Logo de la Tienda" alt="Logotipo" title="Logotipo de la Tienda">
-                <h1>Nombre de la Tienda</h1>
-            </section>
-            <section>
-                <label for="box">Que articulo esta buscando?</label>
-                <input type="text"  placeholder="Escribe..." id="box">
-                <button class="SEARCHBTN">Search</button>
-            </section>
-            <section>
-                <button>CUENTA</button>
-                <button>CARRITO</button>
-            </section>
-            <section class="MENU DE NAVEGACION">
-                <nav>
+            
+            <div class="Search">
+                <input type="search" name="BUSCARCOSA" id="BuscarCosa" placeholder="Que esta buscando?...">
+                <a href="Detalle_Articulo.html" onclick="BuscaCosa()">Buscar</a>
+            </div>
+            <div class="Buttons">
+                <div class="Dropdown">
                     <ul>
-                        <li><a href="#" target="_blank"></a>SWITCH</li>
-                        <li><a href="#" target="_blank"></a>PS4</li>
-                        <li><a href="#" target="_blank"></a>XBOX ONE</li>
-                    </ul>
-                </nav>
-            </section>
+                        <li>CUENTA
+                            <ul>
+                                <li><a href="">Historial de Compras</a></li> 
+                                <li><a href="">Carrito</a></li>
+                                <li><a href="Inicio_Sesion.html">Salir</a></li>
+                            </ul>
+                        </li>
+                    </ul> 
+                </div>
+            </div>
         </header>
+    <body>
+        
         
 
     </body>

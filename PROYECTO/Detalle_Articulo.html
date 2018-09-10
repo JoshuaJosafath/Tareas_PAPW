@@ -6,15 +6,16 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Detalle del Articulo</title>
         <link rel="stylesheet" href="css/styleDetalle_Articulo.css">
+        <script src="js/jsDetalle_Articulo.js"></script>
     </head>
 
     <body>
         <header><h1>Nombre de la Tienda</h1></header>
         <div class="DetalleNombre">
             ARTICULO: <br>
-            <input type="text"  id="DetailName" readonly>
+            <input type="text" id="DetailName" readonly>
         </div>
-        <table>
+        <table class="Imags">
             <tr>
                 <th>Imagen 1 del Articulo</th>
                 <th>Imagen 2 del Articulo</th>
@@ -38,27 +39,61 @@
 
         <div class="Detalles">
             Descripcion: <br>
-            <textarea name="DESCRIP" id="Descrip" cols="50" rows="5" readonly></textarea> <br>
-            <br>
+                <textarea name="DESCRIP" id="Descrip" cols="50" rows="5" readonly></textarea> <br>
+                <br>
             Unidades Restantes: <br>
-            <input type="number" name="UNIDADESREST" id="UnidadesRest" readonly> <br>
-            <br>
+                <input type="number" name="UNIDADESREST" id="UnidadesRest" readonly> <br>
+                <br>
             Nombre del Vendedor: <br>
-            <input type="text" name="USUARIO" id="Usuario" readonly> <br>
+                <input type="text" name="USUARIO" id="Usuario" readonly> <br>
+                <br>
+                <button onclick="Comprar()">Comprar</button>
+                <br>
+                    <div hidden id="ShowValoration">
+                        Valoracion: <br>
+                        <div class="stars">
+                            <form action="">
+                              <input class="star star-5" id="star-5" type="radio" name="star"/>
+                              <input class="star star-4" id="star-4" type="radio" name="star"/>
+                              <input class="star star-3" id="star-3" type="radio" name="star"/>
+                              <input class="star star-2" id="star-2" type="radio" name="star"/>
+                              <input class="star star-1" id="star-1" type="radio" name="star"/>
+                            </form>
+                        </div>
+                    </div>
+                <br>    
             <br>
-            Valoracion:
-                
-            <br>
-            <br><br>
         </div>
 
 
 
-        <div class="Comentarios">
-            <h3>SECCION DE COMENTARIOS</h3>
-            <textarea name="NEWCOMMENT" id="NewComment" cols="50" rows="3" placeholder="Deje su comentario..."></textarea>
-            <br>
+        
+        <h3>SECCION DE COMENTARIOS</h3>
+        <div hidden id="ShowToComment">
+            <textarea name="NEWCOMMENT" id="NewComment" cols="50" rows="3" placeholder="Deje su comentario..."></textarea>                <br>
+            <button onclick="SubirComentario()">COMENTAR</button>
+        </div>
+
+        <div class="Comments-Container">    
             <h4>Otros Comentarios</h4>
+                <ul class="Comments-List" id="Comments-List">
+                    <li>
+                        <div class="Comment">
+                            <div class="Avatar">
+                                <img src="dsfdsv">
+                            </div>
+                            <div class="Comment-Box">
+                                <div class="Comment-Head">
+                                    <h6 class="Comment-Name-Autor">JoshuaJos</h6>
+                                    <span>Hora</span><span>Fecha</span>
+                                </div>
+                                <div class="Comment-Content">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem sit, architecto repellat ab neque officia. Necessitatibus architecto nihil dolorem, aliquid ipsa velit fugiat. Provident, corporis! Ipsum necessitatibus consequatur cumque veritatis?
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                 </ul>
         </div>
 
     </body>
